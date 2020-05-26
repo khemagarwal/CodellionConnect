@@ -4,11 +4,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(170, 243, 0, 0.2);
+  max-width: 80%;
   margin: auto;
   text-align: center;
   font-family: arial;
+  background-color: #FFCB2B;
 }
 
 .title {
@@ -40,23 +41,51 @@ button:hover, a:hover {
 }
 </style>
 </head>
-<body>
+<body style="background-color: #059BE5;">
+<br>
+<h2 style="text-align:center;color: aliceblue;">Overview</h2>
+<br>
 
-<h2 style="text-align:center">User Profile Card</h2>
 
 <div class="card">
-  <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-  <h1>John Doe</h1>
-  <p class="title">CEO & Founder, Example</p>
-  <p>Harvard University</p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-  </div>
-  <p><button>Contact</button></p>
+  
+  <h1 id="name">John Doe</h1>
+  <h2 id="companyName">Company Name</h2>
+  <h4 class="title" id="custEmail">Email</h4>
+  
+ <div id="agreementurl">
+
+ </div>
+
+
+  <h5 style="background-color: #000; color: aliceblue;" id="mobileNo">Mobile no</h5>
 </div>
 
+
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBA-MDWxrP6d_yG6NBaKm_lI7HQenp6vNo",
+    authDomain: "codellion-connect.firebaseapp.com",
+    databaseURL: "https://codellion-connect.firebaseio.com",
+    projectId: "codellion-connect",
+    storageBucket: "codellion-connect.appspot.com",
+    messagingSenderId: "441848860273",
+    appId: "1:441848860273:web:c9696369cc466551c415d0",
+    measurementId: "G-K94DZ9SRPC"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+</script>
+
+
+<script src="overview.js"></script>
 </body>
 </html>
