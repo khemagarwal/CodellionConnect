@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 docRef.get().then(function(doc) {
   if (doc.exists) {
-      console.log("Document data full data:", doc.data());
+      console.log("Document data:", doc.data());
   
 
     document.getElementById("Idea").innerHTML=doc.data().Idea;
